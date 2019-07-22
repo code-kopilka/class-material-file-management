@@ -9,9 +9,8 @@ class TodoManager(object):
     STATUS_PENDING = 'pending'
     CATEGORY_GENERAL = 'general'
 
-    def __init__(self, base_todos_path, create_dir=True):
-        self.base_todos_path = base_todos_path
-        self.path = Path(self.base_todos_path)
+    def __init__(self, base_todos_path):
+        self.path = Path(base_todos_path)
         # continue here
 
     def list(self, status=STATUS_ALL, category=CATEGORY_GENERAL):
