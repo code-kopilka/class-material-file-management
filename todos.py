@@ -9,6 +9,7 @@ class TodoManager(object):
     STATUS_PENDING = 'pending'
     CATEGORY_GENERAL = 'general'
 
+
     def __init__(self, base_todos_path, create_dir=True):
         self.base_todos_path = base_todos_path
         self.path = Path(self.base_todos_path)
@@ -19,6 +20,7 @@ class TodoManager(object):
             if not create_dir:
                 raise ValueError("{} doesn't exist".format(base_todos_path))
             self.path.mkdir(parents=True)
+
 
     def list(self, status=STATUS_ALL, category=CATEGORY_GENERAL):
         todos = {}
